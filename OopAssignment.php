@@ -1,11 +1,20 @@
 <?php
-class Person{
-    private $balance = 100;
-
+class Adress
+{
+    public $city;
 }
 
-$obj = new Person();
-echo $obj->balance;
+class Person
+{
+    public $name;
+    public $adress;
+
+    public __construct($adress)
+    {
+        $this->$adress = new Adress();
+    }
+}
+$p1 = new Person()
 
 
 ?>
