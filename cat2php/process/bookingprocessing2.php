@@ -29,7 +29,7 @@ else
 	  		$statement = $connection->prepare($sql);
   	  		if ($statement->execute([':id' => $stdid,':block_name' => $blockName, ':room_number' => $roomNumber])) 
   			{
-     	 		$message = 'data inserted successfully';
+     	 		$message = 'Data inserted successfully';
   			}
 
 		}
@@ -43,7 +43,7 @@ else
 			$statement->execute();
 			$std = $statement->fetch(PDO::FETCH_OBJ);
 			$stdName = $std->fname;
-	 		$_SESSION['duplicate'] = $stdName." already make reservation"; 
+	 		$_SESSION['duplicate'] = $stdName." Already make reservation"; 
 	 		header("Location: ../booking.php");
 		}
 	 
