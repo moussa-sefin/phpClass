@@ -45,7 +45,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="booking.php">booking</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="display.php">view marks</a></li>
+          
           
           <?php
           if (isset($_SESSION['stdid']))
