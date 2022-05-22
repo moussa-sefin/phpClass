@@ -16,7 +16,7 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>Email</th>
+          <th>E_mail</th>
           <th>Action</th>
         </tr>
         <?php foreach($people as $person): ?>
