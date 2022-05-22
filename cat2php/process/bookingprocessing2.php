@@ -9,7 +9,7 @@ $statement = $connection->prepare($sql);
 $statement->execute();
 $count = $statement->fetchColumn();
 
-if ($count==3) 
+if ($count==8) 
 {
 
 	$_SESSION['isfull'] = "Room ".$roomNumber." is Full Try others";
@@ -29,7 +29,7 @@ else
 	  		$statement = $connection->prepare($sql);
   	  		if ($statement->execute([':id' => $stdid,':block_name' => $blockName, ':room_number' => $roomNumber])) 
   			{
-     	 		$message = 'Data inserted successfully';
+     	 		$message = 'data inserted successfully';
   			}
 
 		}
@@ -43,7 +43,7 @@ else
 			$statement->execute();
 			$std = $statement->fetch(PDO::FETCH_OBJ);
 			$stdName = $std->fname;
-	 		$_SESSION['duplicate'] = $stdName." Already make reservation"; 
+	 		$_SESSION['duplicate'] = $stdName." already make reservation"; 
 	 		header("Location: ../booking.php");
 		}
 	 

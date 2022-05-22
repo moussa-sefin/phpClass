@@ -81,58 +81,7 @@ tr:hover{background-color:#f5f5f5}
     <th>Decision</th>
     
   </tr>
-   <%
    
-   String reg = request.getParameter("searchQuery");
-  
-  String sql = String.format("select student.fname,student.lname,module.mod_title,module.mod_code,level.lev_title,marks.marks from student,module,level,marks where student.s_id=marks.s_id and level.lev_id=module.lev_id and level.lev_id=student.lev_id  and student.regno='%s'",reg);
-	String jdbcUrl = "jdbc:mysql://localhost:3306/iprc_tumba"; 
-	String userName = "root";
-	String passwd = "";
-	
-	try
-	{
-		Class.forName("com.mysql.jdbc.Driver");
-		Connection con = DriverManager.getConnection(jdbcUrl,userName,passwd);
-		Statement st = con.createStatement();
-		ResultSet rs = st.executeQuery(sql);
-		
-		while(rs.next())
-		{
-			%>
-			 <tr>
-    			<td><%=rs.getString("student.fname")%></td>
-    			<td><%=rs.getString("student.lname")%></td>
-    			<td><%=rs.getString("module.mod_title")%></td>
-    			<td><%=rs.getString("module.mod_code")%></td>
-    			<td><%=rs.getString("level.lev_title")%></td>
-    			<td><%=rs.getInt("marks.marks")%></td>
-    			<td><%
-    				if(rs.getInt("marks.marks")>=50)
-    				{
-    					out.print("Success");
-    				}else{
-    					out.print("fail");
-    				}
-    			
-    			%></td>
-    			
-  			</tr>
-			
-			<% 
-	
-		}
-	
-	}
-	catch(Exception e)
-	{
-		response.getWriter().print(e.getMessage());
-	}
-
-  %>
- 
-
-
 </table>
 
 </body>

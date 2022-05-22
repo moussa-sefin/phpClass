@@ -99,6 +99,13 @@
             	}
 
 				%> -->
+                <?php
+                if(isset($_SESSION['duplicate']))
+                {
+                    echo $_SESSION['duplicate'];
+                    unset($_SESSION['duplicate']);
+                }
+                ?>
             </h4>
 
             

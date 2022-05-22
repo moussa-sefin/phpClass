@@ -31,16 +31,29 @@ class User
 	       	$this->level = $level;
 	       	$this->passwd = $passwd;
 
+	       	try
+			   {
+
+				$sql = 'INSERT INTO student( fname, lname, gender, Reg_num, level, dpt, password) VALUES(:fname, :lname, :gender, :regNumber, :level, :dpt, :passwd)';
+
+							$statement = $connection->prepare($sql);
+
+							if ($statement->execute([':fname' => $this->fname, ':lname' => $this->lname, ':gender' => $this->gender, ':regNumber' => $this->regNumber,':level'=>$this->level, ':dpt' => $this->dpt, ':passwd' => $this->passwd ])) 
+							{
+								$_SESSION['message'] = 'data inserted successfully';
+								header("Location: ../login.php");
+							}
+
+
+
+			   }
+			   catch(PDOException $e)
+			   {
+				echo $e->getMessage();
+				$_SESSION['duplicate'] = "User Exist";
+				header("Location: ../studentRegistration.php");
+			   }
 	       	
-	       	$sql = 'INSERT INTO student( fname, lname, gender, Reg_num, level, dpt, password) VALUES(:fname, :lname, :gender, :regNumber, :level, :dpt, :passwd)';
-
-			$statement = $connection->prepare($sql);
-
-			if ($statement->execute([':fname' => $this->fname, ':lname' => $this->lname, ':gender' => $this->gender, ':regNumber' => $this->regNumber,':level'=>$this->level, ':dpt' => $this->dpt, ':passwd' => $this->passwd ])) 
-			{
-			    $_SESSION['message'] = 'data inserted successfully';
-			     header("Location: ../login.php");
-			}
 
     	}
      
