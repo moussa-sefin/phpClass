@@ -58,7 +58,9 @@ color:red;
 
 <body>
 
-	<?php include("header.php") ?>
+
+
+	<?php include("header.php") ?></br></br></br>
 
 
  	
