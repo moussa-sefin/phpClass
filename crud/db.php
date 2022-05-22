@@ -18,7 +18,7 @@ $insertQuery = mysqli_query($con,"INSERT INTO `iot_users`(`userID`,`username`,`u
                          VALUES (0,'$uname','$card')");
 
                         if ($insertQuery) {
-                            echo "inserted";
+                            echo "inserted";                                                            
                         } else {
                             echo "failed to insert";
                         }
