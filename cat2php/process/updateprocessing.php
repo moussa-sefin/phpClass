@@ -89,19 +89,7 @@
     <div class="containere">
         <div class="intro-text">
         <h5 class="msg">
-<!--             	<%
-			if(session.getAttribute("msg")!=null)
-				{
-				out.print(session.getAttribute("msg"));
-				session.removeAttribute("msg");
-				}
-            	else if(session.getAttribute("exCeptionMsg")!=null)
-            	{
-            		out.print(session.getAttribute("exCeptionMsg"));
-    				session.removeAttribute("exCeptionMsg");
-            	}
 
-				%> -->
                 <?php
                 if(isset($_SESSION['duplicate']))
                 {
