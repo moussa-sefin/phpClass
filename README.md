@@ -1,6 +1,8 @@
 
 Project Name: ONLINE HOSTEL BOOKING SYSTEM 
 
+Online Hostel Booking management system is software developed for managing various activities in the hostel. It manages activities including the student information, room information, mess bills, room allocation details, fee details and tracking of the number of students and availability of students.
+
 Problem statement
 
 -student chaos when they arrive at school
