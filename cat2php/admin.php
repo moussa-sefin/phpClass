@@ -9,7 +9,7 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
-      <h2>All people</h2>
+      <h2>All Student And Their Correspondent Rooms </h2>
     </div>
     <div class="card-body">
       <table class="table table-bordered">

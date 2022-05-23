@@ -61,18 +61,7 @@
 
       </nav><!-- .nav-menu -->
 
-<!--   <%
-if(session.getAttribute("regNum")==null)
-{
-  %>
-  <a href="LogOut" class="get-started-btn scrollto" style="display:none;">Log Out</a>
-  <% 
-}else{
-  %>
-  <a href="LogOut" class="get-started-btn scrollto" >Log Out</a>
-  <%
-}
-%> -->
+
       
 
     </div>
