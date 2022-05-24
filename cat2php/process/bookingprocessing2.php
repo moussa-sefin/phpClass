@@ -32,6 +32,9 @@ else
      	 		$message = 'data inserted successfully';
   			}
 
+  			$_SESSION['feedback'] = "Successfully ".$blockName." Room".$roomNumber." Reserved";
+  			header("Location: ../booking.php");
+
 		}
 		catch(PDOException $e) 
 		{

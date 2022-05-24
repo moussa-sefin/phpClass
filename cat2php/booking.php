@@ -63,27 +63,10 @@ color:red;
 
  	
  
-
+<br><br><br>
 
 	<h3 class="msg">
-<!-- 	<%
-		if(session.getAttribute("errorMessage")!=null)
-		{
-			out.print(session.getAttribute("errorMessage"));
-			session.removeAttribute("errorMessage");
-		}
-		else if(session.getAttribute("exCeptionMsg")!=null)
-    	{
-    		out.print(session.getAttribute("exCeptionMsg"));
-			session.removeAttribute("exCeptionMsg");
-    	}else if(session.getAttribute("goodMsg")!=null)
-    	{
-    		out.print(session.getAttribute("goodMsg"));
-			session.removeAttribute("goodMsg");
-    	}
 
-
-	%> -->
 	<?php
 		if (isset($_SESSION['duplicate'])) {
 			echo $_SESSION['duplicate'];
@@ -93,6 +76,11 @@ color:red;
 		{
 			echo $_SESSION['isfull'];
 			unset($_SESSION['isfull']);
+		}
+		elseif(isset($_SESSION['feedback'] ))
+		{
+			echo $_SESSION['feedback'];
+			unset($_SESSION['feedback']);
 		}
 
 	?>

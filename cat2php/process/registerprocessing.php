@@ -56,6 +56,10 @@ class User
 	       	
 
     	}
+    	elseif (empty($this->dpt)||$this->level) {
+    		$_SESSION['emptness'] = "Department or Level Can not be Empty";
+    		header("Location: ../studentRegistration.php");
+    	}
      
 
 

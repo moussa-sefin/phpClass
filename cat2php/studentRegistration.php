@@ -72,7 +72,7 @@
 
         }
         .msg{
-        color:<%=session.getAttribute("textcorol")%>; 
+        color:red; 
         
         }
         strong{
@@ -87,7 +87,7 @@
 
     <div class="containere">
         <div class="intro-text">
-        <h4 class="msg">
+        <h5 class="msg">
 <!--             	<%
 			if(session.getAttribute("msg")!=null)
 				{
@@ -107,8 +107,13 @@
                     echo $_SESSION['duplicate'];
                     unset($_SESSION['duplicate']);
                 }
+                elseif(isset($_SESSION['emptness']))
+                {
+                    echo $_SESSION['emptness'];
+                    unset($_SESSION['emptness']);
+                }
                 ?>
-            </h4>
+            </h5>
 
             
             <p> Alread have an account? <a href="login.php"><strong>Login</strong></a></p>
